@@ -1,4 +1,4 @@
-YOUR NAME and YOUR NETID
+Benjamin Levin BL192
 
 Run WordGramDriver for wordgrams of size 2-10 and record
 the number of WordGram values/objects that occur more than
@@ -15,13 +15,13 @@ values of WSIZE
 WSIZE    # duplicates
 2        60,453
 3        10,756
-4
-5
-6
-7
-8
-9
-10
+4		 1,987
+5		 667
+6		 362
+7		 226
+8		 151
+9		 105
+10		 73
 
 =====
 Explain in your own words the conceptual differences between 
@@ -30,11 +30,20 @@ Answer these questions:
 
 (1) Why the results of these methods should be the same in 
 terms of changes made to the HashSet parameter passed to each method.
+They both add to the set so if something is already in there it won't be
+added, or if something is not there it will be added, so they will add the same
+things to the set no matter what is in there to begin with and it will come out 
+the same.
 
 (2) What are the conceptual differences between the two
 benchmarking methods
+One utilizes the shiftAdd() method instead of shifting the wordgrams
+using indexes.
 
 (3) Is the total amount of memory allocated for arrays
 the same or different in the two methods? Account for
 arrays created in the methods and arrays created by
 WordGram objects. Try to be quantitative in answering.
+Benchmark shift definetley uses less memory since benchmark creates a 
+new wordgram at every iteration of the for loop. if words is n, it will make
+approximately n new wordgrams which all consist of an array.
